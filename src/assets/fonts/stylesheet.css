@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'HarmoniaSansW01';
+    src: url('HarmoniaSansW01-Bold.woff2') format('woff2'),
+        url('HarmoniaSansW01-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmoniaSansMonoW01';
+    src: url('HarmoniaSansMonoW01-Bold.woff2') format('woff2'),
+        url('HarmoniaSansMonoW01-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmoniaSansW01';
+    src: url('HarmoniaSansW01-Regular.woff2') format('woff2'),
+        url('HarmoniaSansW01-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmoniaSansW06-BlackIt';
+    src: url('HarmoniaSansW06-BlackIt.woff2') format('woff2'),
+        url('HarmoniaSansW06-BlackIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'HarmoniaSansW06-Condensed';
+    src: url('HarmoniaSansW06-Condensed.woff2') format('woff2'),
+        url('HarmoniaSansW06-Condensed.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

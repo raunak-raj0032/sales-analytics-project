@@ -1,0 +1,135 @@
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff5f6d, #ff3434);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    position: relative;
+    transition: width 0.3s ease-in-out;
+    overflow: hidden; // Prevents shifting text during collapse
+
+    /* Toggle Button */
+    .toggle-btn {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        background: none;
+        border: none;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 50%;
+        transition: background 0.3s, transform 0.3s;
+
+        &:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    }
+
+    /* Sidebar Header */
+    .sidebar-header {
+        text-align: left;
+        margin-bottom: 20px;
+
+        .logo {
+            background: white;
+            color: red;
+            font-size: 24px;
+            font-weight: bold;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+        }
+    }
+
+    /* Sidebar Title */
+    .sidebar-title {
+        font-size: 20px;
+        margin-top: 6px;
+        padding-left: 60px;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        white-space: nowrap; // Prevents text from wrapping
+        
+    }
+
+    /* Menu List */
+    .menu {
+        list-style: none;
+        padding: 0;
+        margin-top: 40px; // Increased to prevent overlap
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        li {
+            display: flex;
+            align-items: center;
+            padding: 14px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out, padding 0.3s ease-in-out;
+
+            svg {
+                margin-right: 12px;
+                transition: margin 0.3s ease-in-out;
+            }
+
+            span {
+                transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+                white-space: nowrap;
+            }
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.2);
+            }
+        }
+
+        .active {
+            background: rgba(255, 255, 255, 0.3);
+            border-left: 4px solid white;
+        }
+    }
+
+    /* Collapsed Sidebar */
+    &.collapsed {
+        width: 80px;
+
+        .sidebar-title {
+            opacity: 0;
+            visibility: hidden; // Ensures smooth collapse without layout shifts
+        }
+
+        .menu {
+            margin-top: 80px; // More space in collapsed mode
+            gap: 20px;
+
+            li {
+                padding: 12px 0; // Prevents extra padding space in collapsed mode
+                justify-content: center;
+
+                span {
+                    opacity: 0;
+                    visibility: hidden; // Prevents spacing issues
+                }
+
+                svg {
+                    margin-right: 0;
+                }
+            }
+        }
+
+        /* Move Toggle Button in Collapsed Mode */
+        .toggle-btn {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}

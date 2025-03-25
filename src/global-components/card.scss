@@ -1,0 +1,62 @@
+.card {
+    width: 200px;
+    height: 120px;
+    background: linear-gradient(135deg, #394c99, #303648); // Diagonal
+    border-radius: 16px;
+    padding: 16px;
+    position: relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2), 
+                0px 8px 10px rgba(0, 0, 0, 0.15), 
+                0px 12px 14px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: auto;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+
+    .card-icon {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+
+    .card-content {
+        margin-top: 15px; // Push content below the icon
+        text-align: left;
+    }
+
+    .card-title {
+        font-size: 12px;
+        text-transform: uppercase;
+        opacity: 0.7;
+    }
+
+    .card-value {
+        font-size: 24px;
+        font-weight: bold;
+        margin: 4px 0;
+    }
+
+    .card-percentage {
+        font-size: 12px;
+        font-weight: bold;
+
+        &.negative {
+            color: #ff5f6d;
+        }
+
+        &.positive {
+            color: #4caf50;
+        }
+    }
+}

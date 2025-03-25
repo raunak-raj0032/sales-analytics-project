@@ -1,0 +1,18 @@
+@import "../assets/fonts/stylesheet.css"; // Ensure the correct path
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #201c2c; /* Sets the background color */
+  color: white; /* Sets default text color to white */
+  font-family: "HarmoniaSansW06-Condensed", sans-serif; /* Use the correct font name */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
