@@ -1,0 +1,42 @@
+// SCSS Styles
+.piechart-container {
+    background: linear-gradient(135deg, #1c1f2b, #303648); // Dark gradient background
+    border-radius: 12px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    justify-content: left;
+    width: 640px;
+    transition: transform 0.3s ease-in-out;
+    cursor: auto;
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+.piechart-header {
+    margin-bottom: 15px;
+    text-align: left;  // Align text to the left
+
+}
+
+.piechart-dropdown {
+    width: 50%;
+    color: black;
+    margin: 0 auto;
+    margin-left: 0; // Ensures it stays left-aligned
+
+}
+
+.piechart-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piechart-graph {
+    width: 100% !important;
+    height: auto;
+    margin-left: -50px;
+}
+

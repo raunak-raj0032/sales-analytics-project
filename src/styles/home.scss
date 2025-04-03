@@ -8,6 +8,38 @@
     overflow: hidden;
 }
 
+/* Enable scrolling for content */
+.homepage-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto; // Enables scrolling
+    padding: 20px;
+}
+
+
+/* Scrollbar Styling */
+.homepage-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.homepage-content::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+}
+
+.homepage-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.home-piechart-container {
+    padding-left: 10px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 20px
+}
+
 
 
 .header-homepage {
@@ -27,7 +59,7 @@ padding-left: 20px;
     display: flex; // Makes the cards go in a row
     flex-wrap: wrap; // Ensures cards wrap if the screen is small
     gap: 20px; // Adds spacing between cards
-    padding-left: 30px;
+    padding-left: 10px;
     margin-top: 30px;
 }
 
@@ -37,9 +69,11 @@ padding-left: 20px;
     border-radius: 12px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
     margin-top: 20px;
-    margin-left: 30px;
+    margin-left: 10px;
     transition: transform 0.3s ease-in-out;
     cursor: auto;
+    max-width: 640px; // Limit width to prevent excessive stretching
+
 
     &:hover {
         transform: translateY(-2px);

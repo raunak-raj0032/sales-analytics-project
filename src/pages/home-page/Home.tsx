@@ -3,6 +3,7 @@ import { IconX, IconBell } from "@tabler/icons-react";
 import "../../styles/home.scss";
 import Card from "../../global-components/card";
 import { LineChart, Line, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import PieChartComponent from "../../global-components/piechart"; // Import Pie Chart Component
 
 // Sample Data
 const data = [
@@ -34,23 +35,21 @@ const Home = () => {
                 <div className="homepage-card-row">
                     <Card title="Tasks Completed" value={27} percentage={-12} icon={<IconX color="white" />} />
                     <Card title="Tasks Completed" value={27} percentage={-12} icon={<IconX color="white" />} />
-                    <Card
-                        title="Tasks Completed"
-                        value={27}
-                        percentage={-12}
-                        icon={<IconX color="white" />}
-                    />
+                    <Card title="Tasks Completed" value={27} percentage={-12} icon={<IconX color="white" />} />
+                </div>
+
+                {/* Pie Chart Section - NOW PLACED BEFORE LINE CHART */}
+                <div className="home-piechart-container mt-6">
+                    <PieChartComponent />
                 </div>
 
                 {/* Chart Section */}
                 <div className="chart-container">
                     <div className="chart-header">
                         <div className="chart-icon">
-                        <IconBell size={18} color="lightblue" />
+                            <IconBell size={18} color="lightblue" />
                         </div>
-                        <div className="chart-title">
-                        763,215
-                        </div>
+                        <div className="chart-title">763,215</div>
                     </div>
                     <div className="chart-axis-container">
                         <ResponsiveContainer width="100%" height={250}>
@@ -63,29 +62,16 @@ const Home = () => {
                                 <XAxis dataKey="name" stroke="#b0b0b0" tick={{ fill: "#fff" }} />
                                 <YAxis stroke="#b0b0b0" tick={{ fill: "#fff" }} />
                                 <Tooltip />
-                                <Line
-                                    type="monotone"
-                                    dataKey="shipments"
-                                    // stroke="transparent" // Hide original stroke
-                                    strokeWidth={2} // Make it thicker for a better shadow
-                                    filter="url(#lineShadow)" // Apply shadow
-                                />
-
-                                {/* Actual visible line */}
-                                <Line
-                                    type="monotone"
-                                    dataKey="shipments"
-                                    stroke="#4A90E2"
-                                    strokeWidth={3}
-                                    dot={{ fill: "#4A90E2", r: 5, strokeWidth: 0 }} // Remove dot borders
-                                />
+                                <Line type="monotone" dataKey="shipments" strokeWidth={2} filter="url(#lineShadow)" />
+                                <Line type="monotone" dataKey="shipments" stroke="#4A90E2" strokeWidth={3} dot={{ fill: "#4A90E2", r: 5, strokeWidth: 0 }} />
                             </LineChart>
                         </ResponsiveContainer>
                     </div>
                 </div>
+
             </div>
         </div>
     );
-}
+};
 
 export default Home;
